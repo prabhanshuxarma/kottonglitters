@@ -1,0 +1,262 @@
+
+.filter-sidebar{
+    position: fixed;
+    z-index: 3;
+    background: #00000090;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    backdrop-filter: blur(1rem);
+    right:100%;
+    overflow:hidden;
+    transition: all 0.2s ease-in-out;
+    &.show{
+        right:0;
+    }
+   .filter-wraper{
+    position: sticky;
+    top: 0;
+    width: 20rem;
+    height: 100vh;
+    overflow: auto;
+    background: $light;
+    border-right: solid 0.1rem $darkgray;
+    padding-bottom:3rem;
+    &::-webkit-scrollbar {
+        width: 5px;
+      }
+      &::-webkit-scrollbar-track {
+        background-color: transparent;
+      }
+      &::-webkit-scrollbar-thumb {
+        background-color: $darkgray;
+      }
+
+      .filter-header{
+        padding: 0.5rem 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: solid .01rem $darkgray;
+        position: sticky;
+        top: 0;
+        background: $light;
+        z-index: 3;
+        span{
+            display: flex;
+            align-items:center;
+            .icon-filter{
+                font-size:1.5rem;
+                margin-right:0.8rem;
+            }
+            &.reset{
+                cursor:pointer;
+                padding:0;
+                &.active{
+                    background-color:$primary;
+                    color:$light;
+                }
+            }
+        }
+        
+      }
+      .filter-item{
+        padding:1.5rem;
+        padding-bottom:0.5rem;
+        border-bottom: solid 0.01rem $darkgray;
+        .filter-heading{
+            font-size:0.8rem;
+            text-transform: uppercase;
+            @extend .poppins-600;
+            color:$secondary;
+            margin-bottom:1rem;
+        }
+        &.colors{
+            padding:1.5rem;
+        }
+
+                
+        .colors-options{
+            display:flex;
+            gap:0.8rem;
+            flex-wrap:wrap;
+            .custom-checkbox{
+                height:2rem;
+                width:2rem;
+                
+                input[type="checkbox"]{
+                    height:2rem;
+                    width:2rem;
+                    cursor:pointer;
+                }
+                label{
+                    height:2rem;
+                    width:2rem;
+                    padding:0;
+                    display:block;
+                    
+                    
+                    &:after{
+                        height:2rem;
+                        width:2rem;
+                        border:none;
+                        
+                    }
+                    &:before{
+                        height:2rem;
+                        width:2rem;
+                        color:$light;
+                        padding:0.5rem;
+                    }
+                    
+                }
+            }
+        }
+      }
+      .filter-actions{
+        position:fixed;
+        display:flex;
+        bottom:0;
+        width:20rem;
+        text-align: center;
+        
+        .apply{
+            background-color: $secondary;
+            padding:0.7rem 1rem;
+            width:100%;
+            color:$light;
+            font-size:0.9rem;
+            border-top:solid 0.01rem $secondary;
+            @extend .poppins-600;
+        }
+        .filter-cancel{
+            background-color: $light;
+            padding:0.7rem 1rem;
+            color:$secondary;
+            width:100%;
+            font-size:0.9rem;
+            border-top:solid 0.01rem $darkgray;
+            @extend .poppins-600;
+        }
+      }
+   }
+}
+ 
+.heading-wrap{
+    position: sticky;
+    top: 3.50rem;
+    z-index: 2;
+    width: 100%;
+    background: $light;
+    border-bottom:solid 0.01rem $darkgray;
+    .filter-toggle{
+        border: none;
+        min-width: auto;
+        font-size: .9rem;
+        color: $secondary;
+        width: 100%;
+        text-align: center;
+        height: 3rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .sorting{
+        width:100%;
+        border-left:solid 0.01rem $darkgray;
+        text-align:center;
+        display: flex;
+        justify-content:center;
+        .dropdown{
+            width:100%;
+            text-align:center;
+            .dropdown-menu{
+                &.show{
+                    margin-top: 0 !important;
+                    top: 100% !important;
+                    transform: none !important;
+                }
+            }
+        }
+        .sortby{
+            border: none;
+            background: $light;
+            min-width: auto;
+            padding: .8rem 1rem;
+            font-size: .9rem;
+            color: $secondary;
+            width: 100%;
+            text-align: center;
+            justify-content: center;
+            &:after{
+                content: none;
+            }
+        }
+    }
+}
+.selected-filters{
+    padding:.5rem .8rem;
+    background:$gray;
+    ul{
+        list-style:none;
+        padding:0;
+        margin:0;
+        display: flex;
+        overflow:auto;
+        width:100%;
+        li{
+            display: flex;
+            align-items: center;
+            margin-right: 0.5rem;
+            background-color: $gray;
+            font-size:0.8rem;
+            color: $secondary;
+            padding-left:0.5rem;
+            border-radius: $radius-full;
+            white-space: nowrap;
+            i{
+                font-size:0.8rem;
+                color:$secondary;
+                padding:0.4rem 0.6rem 0.4rem 0.4rem;
+                cursor:pointer;
+                margin-left:0.2rem;
+            }
+            span{
+                &.color{
+                    height:0.8rem;
+                    width:0.8rem;
+                    display:block;
+                    margin-right:0.4rem;
+                }
+            }
+        }
+    }
+}
+
+
+.products-area{
+    .listing{
+        margin-top: 0.5rem;
+        .product-card{
+            .img-wrap{
+                position: relative;
+                img{
+                    transition:all 0.4s ease-in-out;
+                    &.default{
+                        position:absolute;
+                    }
+                }
+            }    
+            &:hover{
+                .img-wrap{
+                    img{
+                        
+                        &.default{
+                            opacity:0;
+                        }
+                    }
+                }    
+            }
+        }
+    }
+}

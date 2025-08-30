@@ -1,0 +1,42 @@
+footer{
+    background:$gray;
+    .main-footer{
+           .footer-links{
+            margin-bottom:1.7rem;
+            .footer-heading{
+                font-size:1rem;
+                color:$secondary;
+                font-weight:600;
+                text-align: right;
+            }
+            ul{ list-style:none; padding:0; margin:0;
+                li{ position: relative;
+                    line-height: 1;
+                    margin-top: 1rem;
+                    text-align: right;
+                    display: inline-block;
+                    width: 100%;
+                    a{ font-size:0.8rem; line-height:1; color: $secondary; 
+                        &:hover{
+                            color:$secondary;   
+                        }
+                    }
+                }
+            }
+        }
+       
+    }
+    
+}
+
+.copyright-footer{
+        font-size:0.8rem;
+        line-height:1.5rem;
+        border-top:solid 0.01rem $darkgray;
+    }
+.payment-partners{
+    img{
+        width:300px;
+        max-width:100%;
+    }
+}

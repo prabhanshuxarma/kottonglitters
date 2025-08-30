@@ -1,0 +1,22 @@
+.banner{
+    
+    max-width:1600px;
+    margin:0px auto;
+    .heroslider { 
+        .swiper-wrapper{
+            .swiper-slide{ 
+                .slide-image{
+                    height:100%;
+                    width: 100%;
+                    object-fit: cover;
+                }
+             }
+        }
+        
+    }
+  
+}
+
+.instagram-sec{
+    position: relative;
+}

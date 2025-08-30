@@ -1,0 +1,209 @@
+.content-wraper {
+  min-height: auto;
+  .desktop-overview {
+    margin: 0 auto;
+    .left-sec {
+      padding: 0;
+      border-right: solid 0.01rem $darkgray;
+      position: sticky;
+      top: 0;
+      .about-user {
+        display: flex;
+        align-items: center;
+        padding: 1rem;
+        background: $gray;
+        .user-img {
+          min-width: 4rem;
+          min-height: 4rem;
+          max-width: 4rem;
+          max-height: 4rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 3rem;
+          overflow: hidden;
+          background: $darkgray;
+          font-size: 2rem;
+          margin-right: 1rem;
+        }
+        .user-detail {
+          .hello {
+            font-size: 0.9rem !important;
+            @extend .poppins-400;
+            margin-bottom: 0.2rem;
+          }
+          .username {
+            font-size: 1rem;
+            @extend .poppins-600;
+          }
+        }
+      }
+      .nav-pills {
+        button {
+          border-radius: 0;
+          text-align: left;
+          font-size: 0.9rem;
+          padding: 1rem;
+          color: $secondary;
+          &.active {
+            background-color: $darkgray;
+          }
+        }
+      }
+    }
+    .right-sec {
+      padding: 2rem;
+      .heading{
+        font-size:1rem;
+        @extend .poppins-600;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+      }
+      .profile {
+        .btn-save,
+        .btn-edit {
+          display: none;
+          margin-left: 0.9rem;
+        }
+        .btn-edit.show {
+          display: inline-block;
+        }
+        .form-group {
+          display: flex;
+          align-items: center;
+          white-space: nowrap;
+          justify-content: flex-start;
+          label {
+            min-width: 10rem;
+            font-size: 0.9rem;
+          }
+        }
+      }
+      .orders {
+        .order-block {
+          border: solid 0.01rem $darkgray;
+          .order-summary {
+            padding: 1rem;
+            background: $gray;
+            position: relative;
+            p {
+              margin-bottom: 0.5rem !important;
+              font-size: 0.9rem;
+              &.status {
+                font-weight: bold;
+                font-size: 0.9rem;
+                display: inline-block;
+                position: absolute;
+                right: 1rem;
+                top: 1rem;
+              }
+            }
+            .total-price {
+              @extend .poppins-600;
+              margin: 0 !important;
+              font-size: 1rem;
+              color: $secondary;
+            }
+          }
+          .order-item {
+            padding: 0 1rem;
+            background-color: $light;
+            .item-details {
+              flex-grow: 1;
+              p {
+                margin-bottom: 0.5rem !important;
+                font-size: 0.9rem;
+                color: $secondary;
+                &.product-name {
+                  font-weight: bold;
+                  font-size: 0.9rem;
+                  color: $secondary;
+                  margin-bottom: 0.625rem;
+                  a {
+                    &:hover {
+                      color: inherit;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      .address{
+        .new-address{
+          display:none;
+          &.show{
+            display:block;
+          }
+        }
+        .address-item{
+          padding:1rem;
+          display:flex;
+          justify-content:space-between;
+          background-color:$gray;
+          margin-bottom:1rem;
+          .address-detail{
+            .icon-sec{
+              position: absolute;
+              left:0;
+              top:0.3rem;
+              font-size:2rem;
+            }
+            position: relative;
+            padding-left:3.7em;
+            .headline{
+              font-size:1rem;
+              @extend .poppins-600;
+            }
+            .detail{
+              font-size:0.8rem;
+              @extend .poppins-400;
+              color:$default;
+            }
+          }
+          .actions{
+            font-size:0.9rem;
+            display:flex;
+            align-items:center;
+            background:$light;
+            i{
+              font-size:1.5rem;
+            }
+            .button{ padding:1rem; cursor: pointer; }
+          }
+
+        }
+      }
+      .wishlist {
+        position: relative;
+        .item-counts{
+          font-size:1rem;
+          @extend .poppins-600;
+        }
+        input {
+          width: 100%;
+          position: absolute;
+          height: 100%;
+          left: 0;
+          top: 0;
+          opacity: 0;
+          cursor: pointer;
+        }
+        label {
+          border: solid 0.01rem $darkgray;
+          padding: 0.2rem 0.8rem;
+          border: solid 0.01rem $darkgray;
+          font-size: 0.8rem;
+        }
+        input {
+          &:checked ~ label {
+            background-color: $secondary;
+            color: $light;
+          }
+        }
+      }
+    }
+  }
+}

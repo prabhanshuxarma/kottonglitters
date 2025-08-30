@@ -1,0 +1,189 @@
+.desktop-header{
+    margin-bottom:0;
+}
+.container{
+    max-width:100%;
+    padding:0 0.8rem;
+}
+
+.filter-sidebar{
+   .filter-wraper{
+    position: sticky;
+    top:7.5rem;
+    width:20rem;
+    height:calc(100vh - 10rem);
+    overflow:auto;
+    border-right:solid 0.01rem $darkgray;
+
+    &::-webkit-scrollbar {
+        width: 5px;
+      }
+      &::-webkit-scrollbar-track {
+        background-color: transparent;
+      }
+      &::-webkit-scrollbar-thumb {
+        background-color: $darkgray;
+      }
+
+      .filter-header{
+        padding:1rem 1.5rem;
+        display: flex;
+        align-items:center;
+        justify-content: space-between;
+        border-bottom: solid 0.01rem $darkgray;
+        span{
+            display: flex;
+            align-items:center;
+            .icon-filter{
+                font-size:1.5rem;
+                margin-right:0.8rem;
+            }
+            &.reset{
+                cursor:pointer;
+                padding:0.2rem 0.5rem;
+                &.active{
+                    background-color:$primary;
+                    color:$light;
+                }
+            }
+        }
+        
+      }
+      .filter-item{
+        padding:1.5rem;
+        padding-bottom:0.5rem;
+        border-bottom: solid 0.01rem $darkgray;
+        .filter-heading{
+            font-size:1rem;
+            text-transform: uppercase;
+            @extend .poppins-600;
+            color:$secondary;
+            margin-bottom:1rem;
+        }
+        &.colors{
+            padding:1.5rem;
+        }
+
+                
+        .colors-options{
+            display:flex;
+            gap:0.8rem;
+            flex-wrap:wrap;
+            .custom-checkbox{
+                height:2rem;
+                width:2rem;
+                
+                input[type="checkbox"]{
+                    height:2rem;
+                    width:2rem;
+                    cursor:pointer;
+                }
+                label{
+                    height:2rem;
+                    width:2rem;
+                    padding:0;
+                    display:block;
+                    
+                    
+                    &:after{
+                        height:2rem;
+                        width:2rem;
+                        border:none;
+                        
+                    }
+                    &:before{
+                        height:2rem;
+                        width:2rem;
+                        color:$light;
+                        padding:0.5rem;
+                    }
+                    
+                }
+            }
+        }
+      }
+   }
+ 
+  
+}
+
+.products-area{
+    .heading-wrap{
+        padding:1rem 1.5rem;
+        font-size:1.2rem;
+        color:$secondary;
+        .results-heading{
+            font-size:1.2rem;
+            @extend .poppins-700;
+        }
+        .sorting{
+            .sortby{
+                border:none;
+                background:$gray;
+                min-width:8rem;
+                padding:.5rem 1.5rem .5rem 1rem;
+                font-size: 1rem;
+            }
+        }
+    }
+    .selected-filters{
+        margin-bottom:1.5rem;
+        padding:0 1.5rem;
+        ul{
+            list-style:none;
+            padding:0;
+            margin:0;
+            display: flex;
+            li{
+                display: flex;
+                align-items: center;
+                margin-right: 1rem;
+                background-color: $gray;
+                font-size: .87rem;
+                color: $secondary;
+                padding-left:0.8rem;
+                
+                i{
+                    font-size:1rem;
+                    color:$secondary;
+                    padding:0.4rem 0.6rem;
+                    cursor:pointer;
+                    margin-left:0.5rem;
+                }
+                span{
+                    &.color{
+                        height:0.8rem;
+                        width:0.8rem;
+                        display:block;
+                        
+                        margin-right:0.4rem;
+                    }
+                }
+            }
+        }
+    }
+    .listing{
+        padding:0rem 1.5rem;
+        .product-card{
+            .img-wrap{
+                position: relative;
+                img{
+                    transition:all 0.4s ease-in-out;
+                    &.default{
+                        position:absolute;
+                    }
+                }
+            }    
+            &:hover{
+                .img-wrap{
+                    img{
+                        
+                        &.default{
+                            opacity:0;
+                        }
+                    }
+                }    
+            }
+        }
+    }
+}

@@ -1,0 +1,359 @@
+.desktop-header{
+    margin-bottom:0;
+}
+ 
+.enqury{
+                        .icon-envelop{
+        font-size: 1.5rem;
+        margin-right:0.7rem;
+    }
+}
+
+.fancybox-bg{
+    background:$gray;
+    opacity:1 !important;
+}
+.desktop-productdetail{
+    .product-imgs-sec{
+        position:sticky;
+        top:190px;
+        .product-grid{
+            list-style:none;
+            padding:0;
+            margin:0;
+            display: flex;
+            flex-wrap: wrap;
+            li{
+                padding:0;
+                margin:0;
+            }
+        }
+    }
+    .product-detail-sec{
+        position:sticky;
+        top:190px;
+        @extend .poppins-400;
+        .product-name{
+            margin:0px;
+            padding:0;
+            font-size:1.2rem !important;
+        }
+        .product-price{
+            margin:0px;
+            padding:0;
+            font-size:1.5rem !important;
+            @extend .poppins-700;
+        }
+        .availability{
+            display: flex;
+            align-items: center;
+            line-height:1;
+            span{
+                margin-left:0.4rem;
+                display: flex;
+                align-items:center;
+                justify-content:center;
+                .icon{
+                    min-height:1.3rem;
+                    min-width:1.3rem;
+                        color:$light;
+                    font-size:1.2rem;
+                    padding:0.3rem;
+                    margin-left:0.5rem;
+                } 
+            }
+        }
+        .shipping{
+            .check-delivey {
+                width: 100%;
+                color: $secondary;
+                border:solid 0.3rem $gray;
+                padding:0.3rem 0.8rem;
+                display: flex;
+                align-items: center;
+                .icon-location {
+                    font-size:1.5rem;
+                }
+                .enter-pin {
+                    border:none;
+                    min-width:calc(100% - 2rem);
+                    padding:0.5rem;
+                    margin-right:2rem;
+                }
+                .check{
+                    padding:0.5rem 1rem;
+                    color:$secondary;
+                    cursor: pointer;
+                    @extend .poppins-600;
+                }
+            }
+            .delivery-details{
+                background-color:$gray;
+                padding:1rem; 
+                
+                padding-left:4rem;
+                position: relative;
+                .icon-shipping{
+                        transform: scaleX(-1);
+                        position: absolute;
+                        left:1.3rem;
+                        font-size:1.5rem;
+                        margin-right:0.8rem;
+                    }
+                .heading{
+                    display: flex;
+                    align-items:center;
+                    font-size:0.9rem;
+                    @extend .poppins-600;
+                    margin-bottom:0.3rem;
+                   
+                }
+                ul{
+                    padding:0;
+                    margin:0;
+                    padding-left: 1.2rem;
+                    font-size:0.9rem;
+                }
+            }
+    }
+     
+        .product-size {
+            @extend .poppins-400;
+            span {
+                font-size: 0.8rem;
+                margin-right: 1.2rem;
+            }
+            ul {
+                display: flex;
+                align-items: center;
+                margin:0;
+                padding:0;
+            }
+            .custom-radio-size {    
+                position: relative;
+                align-items: center;
+                display: flex;
+                margin: 0px;
+                margin-right: 0.7rem;
+                cursor:pointer;
+                &:last-child {
+                    margin-right: 0px;
+                }
+                input[type="radio"] {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    opacity: 0;
+                    width: 100%;
+                    height: 100%;
+                    display: block;
+                    z-index: 999;
+                    cursor: pointer;
+                }
+                label {
+                    color: $secondary;
+                    display: flex;
+                    align-items:center;
+                    justify-content:center;
+                    text-align: center;
+                    width: 100%;
+                    margin: 0px;
+                    height: 2.7rem;
+                    width: 2.7rem;
+                    font-size: 0.8rem;
+                    &::before {
+                        color: $light;
+                        content: '';
+                        position: absolute;
+                        text-align: center;
+                        opacity: 1;
+                        visibility: visible;
+                        height: 2.7rem;
+                        width: 2.7rem;
+                        display: block;
+                        transform: translate(-50%, -50%);
+                        top: 50%;
+                        left: 50%;
+                        border: solid 0.1rem $darkgray;
+                        z-index: -1;
+                    }
+                }
+                input[type="radio"]:checked {
+                    & ~ label {
+                        color: $light;
+                        &::before {
+                            background: $secondary !important;
+                            border: none;
+                        }
+                    }
+                }
+            }
+
+          
+        }
+        .product-colors{
+            .colors-options{
+                display:flex;
+                gap:0.8rem;
+                flex-wrap:wrap;
+                .custom-radio{
+                    height:2rem;
+                    width:2rem;
+                        input[type="radio"]{
+                        height:2rem;
+                        width:2rem;
+                        cursor:pointer;
+                        &:checked ~ label{
+                            &:before{
+                                display: block;
+                            }
+                        }
+                    }
+                    label{
+                        height:2rem;
+                        width:2rem;
+                        padding:0;
+                        display:block;
+                        &:after{
+                            height:2rem;
+                            width:2rem;
+                            border:none;
+                        }
+                        &:before{
+                            content: "\e908";
+                            font-family: "kgicon";
+                            display: none;
+                            color:$light;
+                            font-size:1rem;
+                            height:2rem;
+                            width:2rem;
+                            padding:0.5rem;
+                            line-height: 1;
+                            margin:0;
+                            background:none !important;
+                        }
+                    }
+                }
+            }
+        }
+
+        .product-qty {
+            display: flex;
+            align-items: center;
+            margin-right:1rem;
+            label {
+                margin-right: 1.2rem;
+                white-space:nowrap;
+            }
+            .qty {
+                overflow: hidden;
+                width: 10rem;
+                display: flex;
+                height: 3rem;
+                button{
+                    width: 35%;
+                    font-size: 1.5rem;
+                    border: none;
+                    background: $gray;
+                    line-height: normal;
+                }
+            }
+            input[type="text"] {
+                
+                border: solid 1px $gray;
+                width: 50%;
+                text-align: center;
+                outline: none;
+                height: 3rem;
+                padding: 0 0.3rem !important;
+                font-size: 1rem;
+            }
+        }
+        .actions{
+            .add-to-cart{
+                background:$primary;
+                color:$light;
+                display:flex;
+                justify-content: space-between;
+                align-items: center;
+                @extend .poppins-400;
+                .icon-cart{
+                    font-size:1.6rem;
+                }
+            }
+            .wishlist{
+                .icon-favourite{
+                    font-size:1.4rem;
+                }
+            }
+        }
+        .product-description{
+            font-size: .9rem;
+            padding: 0;
+            border: solid 0.1rem $darkgray;
+            overflow:hidden;
+            .accordion-item{
+                border:none;
+                border-bottom:solid 0.01rem $darkgray;
+                padding:0;
+                border-radius:0;
+                &:last-child{
+                    border-bottom:none;    
+                }
+                .accordion-button{
+                    background-color:$gray;
+                    color:$secondary;
+                    @extend .poppins-600;
+                    padding:1rem;
+                    &:focus{
+                        border:none;
+                        outline:none;
+                        box-shadow:none;
+                    }
+                    &:after{
+                        content: "\e90e";
+                        background:none;
+                        font-family: 'kgicon';
+                        font-size:1.2rem;
+                        color:$secondary;
+                        height:auto;
+                    }
+                   
+                }
+                .accordion-body{
+                    padding:1rem;                    
+                    p{
+                        font-size:0.9rem;
+                    }
+                        ul{
+                            padding:0;
+                            list-style:none;
+                            font-size:0.9rem;
+                            margin:0;
+                            li{
+                                margin:0.5rem 0;
+                            }
+                        }
+                }
+            }
+        }
+    }
+    
+}
+ 
+
+.size-guide-modal{
+    table{
+        border-color: $darkgray;
+        font-size:0.8rem;
+        thead{
+            th{
+               background-color: $gray;
+            }
+        }
+        th,
+        td{
+            padding:0.5rem 0.8rem;
+        }
+    }
+}
